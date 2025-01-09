@@ -9,7 +9,11 @@ const content = {
         btn_text: "Comenzar gestión", 
     }, 
     solutions: {
-        title: "¿Tus equipos trabajan con datos desactualizados?\n¿El manejo individual de inventarios dificulta la colaboración?", 
+        problems: [
+            "¿Tus equipos trabajan con datos desactualizados?", 
+            "¿El manejo individual de inventarios dificulta la colaboración?", 
+            "¿Pierdes tiempo tratando de coordinar información entre departamentos?", 
+        ], 
         intro: {
             with: "Con ", 
             text: ", todos trabajan en el mismo flujo, con datos siempre actualizados.", 
@@ -44,18 +48,24 @@ export function Solutions(){
 
     return (
         <>
-            <section className="w-full h-screen bg-gradient-to-b from-neutral-800 to-neutral-600 flex flex-col items-center justify-center">
-                <h2 className="text-h3 w-4/5 text-center font-bold text-cyan-200">{content.solutions.title}</h2>
-                <div className="flex w-4/5 flex-row items-center justify-center gap-10">
-                    <h5 className="text-h4 text-center w-1/2 font-semibold text-gray-50">
-                        {content.solutions.intro.with}
-                        <span className="text-cyan-200">
-                            {content.project_name}
-                        </span>
-                        {content.solutions.intro.text}
-                    </h5>
-                    <div className="w-[300px] h-[300px] flex items-center justify-center text-gray-50 border border-solid border-white rounded-3xl">
-                        Logo
+            <section className="w-full h-[700px] py-10 gap-5 bg-gradient-to-b from-neutral-800 to-neutral-600 flex items-center justify-center">
+                <div className="w-3/4 flex flex-col gap-8 items-center justify-around">
+                    <div className="flex flex-row gap-5">
+                        {content.solutions.problems.map((problem, id) => (
+                            <h2 key={id} className="text-h5 text-center font-semibold text-gray-50">{problem}</h2>
+                        ))}
+                    </div>
+                    <div className="flex flex-row items-center justify-center gap-10">
+                        <h5 className="text-h4 text-center w-1/2 font-semibold text-gray-50">
+                            {content.solutions.intro.with}
+                            <span className="text-cyan-300">
+                                {content.project_name}
+                            </span>
+                            {content.solutions.intro.text}
+                        </h5>
+                        <div className="w-[250px] h-[250px] flex items-center justify-center text-gray-50 border border-solid border-white rounded-3xl">
+                            Logo
+                        </div>
                     </div>
                 </div>
             </section>
