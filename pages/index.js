@@ -4,7 +4,7 @@ import HeroSection, { Solutions } from "@/components/common/landing";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  variable: "--font-geist-sans", 
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <div>
       <header>
-
       </header>
       <main>
         <HeroSection />
