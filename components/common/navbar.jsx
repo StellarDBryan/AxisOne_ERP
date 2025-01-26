@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import { SignInBtn } from "../ui/buttons";
 
 const content = {
-
+    signInBtn: "Iniciar sesión", 
 };
 
 export function Navbar(){
+
+    const { data: session } = useSession();
 
     return(
         <>
@@ -19,7 +23,12 @@ export function Navbar(){
                         className="object-contain brightness-150 w-[180px] transform hover:scale-90 transition-transform duration-200 ease-in-out"
                     />
                 </Link>
-                
+                {!session 
+                    ? 
+                        <SignInBtn>
+                            {content.signInBtn}
+                        </SignInBtn>
+                    : ''}
             </nav>
         </>
     );

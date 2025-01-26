@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'; 
-
+import { signIn, signOut } from 'next-auth/react'; 
 
 export function HeroSectionBtn({ children }){
 
@@ -14,6 +14,19 @@ export function HeroSectionBtn({ children }){
                     <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/>
                 </svg>
             </motion.button>
+        </>
+    );
+} 
+
+export function SignInBtn({ children }){
+
+    return( 
+        <>
+            <button
+                onClick={() => signIn()} 
+                className='btn btn-outline bg-transparent text-gray-50 hover:text-neutral-800 hover:border-cyan-200 hover:bg-cyan-200 rounded-full text-p'>
+                {children}
+            </button>
         </>
     );
 }

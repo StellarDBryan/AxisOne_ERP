@@ -24,5 +24,7 @@ module.exports = {
       'sm2': '0.64rem',   
     }, 
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 };

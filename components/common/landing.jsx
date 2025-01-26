@@ -46,7 +46,7 @@ export default function HeroSection(){
 
     return (
         <>
-            <section className="relative flex items-center w-full h-screen bg-neutral-800/55 md:bg-gradient-to-r md:from-neutral-800/30 lg:from-neutral-800/10 overflow-hidden">
+            <section className="relative flex items-center w-full h-screen bg-neutral-800/55 md:bg-gradient-to-r lg:bg-gradient-to-r md:from-neutral-800/30 lg:from-neutral-800/40 overflow-hidden">
                 <Image 
                     src='/images/backgrounds/bg2.jpg'
                     alt="ERP image"
