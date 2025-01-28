@@ -20,7 +20,7 @@ export function Navbar(){
 
     return(
         <>
-            <nav className="bg-neutral-700/40 drop-shadow-2xl backdrop-blur-md flex flex-row justify-between items-center fixed top-0 w-full h-auto py-3 px-10 z-50">
+            <nav className="bg-neutral-700/70 drop-shadow-2xl backdrop-blur-md flex flex-row justify-between items-center fixed top-0 w-full h-auto py-3 px-10 z-50 overflow-hidden">
                 <Link href='/' className="w-auto inline-block">
                     <Image
                         src="/images/logos/AxisOne_logoH2.png"

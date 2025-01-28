@@ -9,6 +9,12 @@ export const authOptions = {
             clientSecret: process.env.GOOGLE_SECRET,
         }),      
     ], 
+    callbacks: {
+        async redirect({ url, baseUrl }) {
+          // Redirigir al dashboard después del inicio de sesión
+          return `${baseUrl}/dashboard`;
+        },
+      },
     debug: true, 
 };
 
