@@ -1,25 +1,26 @@
 export const data = {
     inventory1: {
         companyName: "Empresa 1", 
-        products: [
+        actives: [
             {
                 "id": 1,
-                "product": "Laptop HP",
+                "sku": 'ddscd4', 
+                "active": "Laptop HP",
                 "category": "Electrónica",
                 "quantity": 50,
                 "last_entry": "2025-01-20",
                 "last_exit": "2025-01-22",
                 "low_stock_alert": 10, 
-              }, 
+            }, 
         ], 
-        productCategories: [
+        activeCategories: [
             { "id": 1, "name": "Electrónica", "description": "Productos electrónicos como laptops, tablets y celulares." },
             { "id": 2, "name": "Accesorios", "description": "Periféricos y accesorios de tecnología." }
         ], 
         movements: [
             {
                 "id": 1,
-                "product": "Laptop HP",
+                "active": "Laptop HP",
                 "type": "entrada",
                 "quantity": 10,
                 "date": "2025-01-20",
@@ -49,7 +50,7 @@ export const data = {
               "contact": "Juan Pérez",
               "email": "juan.perez@tech.com",
               "phone": "+52 123 456 7890",
-              "products_supplied": ["Laptop HP", "Mouse Logitech"]
+              "actives_supplied": ["Laptop HP", "Mouse Logitech"]
             },
             {
               "id": 2,
@@ -57,7 +58,7 @@ export const data = {
               "contact": "María Gómez",
               "email": "maria.gomez@global.com",
               "phone": "+52 987 654 3210",
-              "products_supplied": ["Teclado Gaming", "Monitor Dell"]
+              "actives_supplied": ["Teclado Gaming", "Monitor Dell"]
             }
           ], 
     }, 

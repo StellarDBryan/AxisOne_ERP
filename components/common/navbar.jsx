@@ -20,7 +20,7 @@ export function Navbar(){
 
     return(
         <>
-            <nav className="bg-neutral-700/70 drop-shadow-2xl backdrop-blur-md flex flex-row justify-between items-center fixed top-0 w-full h-auto py-3 px-10 z-50 overflow-hidden">
+            <nav className="bg-neutral-700/30 drop-shadow-2xl backdrop-blur-md flex flex-row justify-between items-center fixed top-0 w-full h-auto py-3 px-10 z-50">
                 <Link href='/' className="w-auto inline-block">
                     <Image
                         src="/images/logos/AxisOne_logoH2.png"
@@ -53,7 +53,7 @@ export function Navbar(){
                                 </div>
                                 <ul
                                     tabIndex={0}
-                                    className="menu menu-sm bg-neutral-700 text-gray-50 dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                    className="menu menu-sm bg-neutral-700 text-gray-50 dropdown-content rounded-box mt-3 w-52 p-2 shadow">
                                     <li>
                                         <button className="bg-inherit hover:bg-gray-100 hover:text-neutral-800" onClick={() => signOut()}>
                                             {content.profileDropdown[0].name}
