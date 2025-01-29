@@ -1,9 +1,10 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import HeroSection, { Solutions } from "@/components/common/landing";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  variable: "--font-geist-sans", 
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -15,7 +16,12 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <div>
-      Index
+      <header>
+      </header>
+      <main>
+        <HeroSection />
+        <Solutions />
+      </main> 
     </div>
   );
 }
