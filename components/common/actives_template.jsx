@@ -8,10 +8,12 @@ export function Page(){
 
     return (
         <>
-            <section className="w-full bg-transparent z-10 py-20 p-10 h-screen flex flex-col">
-                {actives.map((active, id) => (
-                    <ActiveCard key={id} active={active} />
-                ))}
+            <section className="w-4/5 ml-[20%] bg-transparent z-10 py-20 p-10 h-auto flex flex-col">
+                <div className="w-full h-auto flex flex-row flex-wrap gap-5 items-center justify-around">
+                    {actives.map((active, id) => (
+                        <ActiveCard key={id} active={active} />
+                    ))}
+                </div>
             </section>
         </>
     );
