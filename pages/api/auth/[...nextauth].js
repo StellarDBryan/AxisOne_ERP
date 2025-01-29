@@ -12,9 +12,9 @@ export const authOptions = {
     callbacks: {
         async redirect({ url, baseUrl }) {
           // Redirigir al dashboard después del inicio de sesión
-          return `${baseUrl}/dashboard`;
-        },
-      },
+          return `${baseUrl}/actives`;
+        }, 
+      }, 
     debug: true, 
 };
 
