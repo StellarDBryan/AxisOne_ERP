@@ -51,7 +51,7 @@ export default function HeroSection(){
                     src='/images/backgrounds/bg2.jpg'
                     alt="ERP image"
                     fill
-                    className="object-cover absolute inset-0 -z-10"
+                    className="object-cover absolute inset-0 opacity-40"
                 /> 
                 <div className="w-[85%] mx-auto md:mx-0 md:ml-10 lg:w-3/5 gap-5 flex flex-col items-start text-gray-50 z-20">
                     <h1 className="text-h5 md:text-h4 lg:text-h3 font-extrabold ">{content.heroSection.title}</h1>
