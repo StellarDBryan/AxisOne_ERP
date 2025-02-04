@@ -8,7 +8,7 @@ export const data = {
                 "active": "Laptop HP", 
                 "provider": "Proveedor Tech",
                 "category": "Electrónica",
-                "quantity": 10,
+                "quantity": 20,
                 "last_entry": "2025-01-20",
                 "last_exit": "2025-01-22",
                 "low_stock_alert": 10, 
