@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'; 
 import { signIn, signOut } from 'next-auth/react'; 
+import Link from 'next/link';
 
 export function HeroSectionBtn({ children }){
 
@@ -28,5 +29,29 @@ export function SignInBtn({ children }){
                 {children}
             </button>
         </>
+    );
+} 
+
+export function SidebarBtn({ children, redirectURL, pathname }){
+
+    return (
+        <Link href={redirectURL} className='w-full'>
+            <motion.button 
+                initial={{
+                    backgroundColor: 'transparent', 
+                    color: (pathname === redirectURL) ? '#67e8f9' : '#f9fafb', 
+                }}
+                whileHover={{
+                    backgroundColor: '#67e8f9', 
+                    color: '#171717', 
+                }} 
+                transition={{
+                    type: 'spring', 
+                    duration: 0.3, 
+                }}
+                className="btn group gap-2 px-4 py-3 flex flex-row items-center justify-start overflow-hidden flex-nowrap drop-shadow-none hover:drop-shadow-none w-full border-none bg-transparent rounded-md text-[1.1rem] text-gray-50 hover:text-neutral-800">
+                {children}
+            </motion.button>
+        </Link>
     );
 }
