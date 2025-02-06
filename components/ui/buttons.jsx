@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'; 
 import { signIn, signOut } from 'next-auth/react'; 
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export function HeroSectionBtn({ children }){
@@ -32,12 +33,14 @@ export function SignInBtn({ children }){
     );
 } 
 
-export function SidebarBtn({ children, redirectURL, pathname }){
+export function SidebarBtn({ children, redirectURL }){ 
+
+    const pathname = usePathname();
 
     return (
         <Link href={redirectURL} className='w-full'>
             <motion.button 
-                initial={{
+                animate={{
                     backgroundColor: 'transparent', 
                     color: (pathname === redirectURL) ? '#67e8f9' : '#f9fafb', 
                 }}
@@ -49,7 +52,7 @@ export function SidebarBtn({ children, redirectURL, pathname }){
                     type: 'spring', 
                     duration: 0.3, 
                 }}
-                className="btn group gap-2 px-4 py-3 flex flex-row items-center justify-start overflow-hidden flex-nowrap drop-shadow-none hover:drop-shadow-none w-full border-none bg-transparent rounded-md text-[1.1rem] text-gray-50 hover:text-neutral-800">
+                className="btn group gap-4 px-4 py-4 flex flex-row items-center justify-start overflow-hidden flex-nowrap drop-shadow-none hover:drop-shadow-none w-full border-none bg-transparent rounded-md text-[1.1rem] text-gray-50 hover:text-neutral-800">
                 {children}
             </motion.button>
         </Link>
