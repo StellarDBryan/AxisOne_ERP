@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SignInBtn } from "../ui/buttons";
+import { SignInBtn } from "../ui/buttons"; 
+import { useSession } from "next-auth/react";
 
 const content = {
     signInBtn: "Iniciar sesión", 
@@ -12,9 +13,11 @@ const content = {
     ], 
 };
 
-export function Navbar(){
+export function Navbar(){ 
 
-    return(
+    const { data: session} = useSession(); 
+
+    return(!session &&
         <>
             <nav className="bg-neutral-700/30 drop-shadow-2xl backdrop-blur-md flex flex-row justify-between items-center fixed top-0 w-full h-auto py-3 px-10 z-50">
                 <Link href='/' className="w-auto inline-block">

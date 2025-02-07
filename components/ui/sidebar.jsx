@@ -28,7 +28,7 @@ export function Sidebar(){
     const { data: session } = useSession(); 
     const [hover, setHover] = useState(false); 
     
-    return (
+    return (session && 
         <>
             <motion.nav 
                 initial={{
