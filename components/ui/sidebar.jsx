@@ -106,20 +106,24 @@ export function Sidebar(){
                         </span> 
                     </SidebarBtn>
                 </div>
-                <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle w-[60px] h-[60px] avatar ring-2 ring-gray-100 hover:ring-4 hover:ring-cyan-300 focus:ring-4 focus:ring-cyan-300">
+                <div tabIndex={0} role="button" className=' dropdown dropdown-top flex flex-row group justify-around items-center hover:bg-gray-500/40 focus:bg-gray-500/40 rounded-md gap-4 w-full px-2 py-4 mt-auto transition-colors duration-100 ease-in-out'>
+                    <div className="btn btn-ghost btn-circle w-[55px] h-[55px] avatar ring-2 ring-gray-100 group-hover:ring-4 group-hover:ring-cyan-300 group-focus:ring-4 group-focus:ring-cyan-300">
                         <div className="w-auto rounded-full">
                             <Image
                                 width={200}
                                 height={200}
                                 alt="User profile image"
                                 className="object-contain w-[200px]"
-                                src={session?.user?.image || "/default-avatar.png"} />
+                                src={session?.user?.image || "/images/default-avatar.png"} />
                         </div>
-                    </div>
+                    </div> 
+                    <div className={`flex flex-col justify-around w-full transition-opacity duration-100 ease-in-out ${hover ? 'opacity-100' : 'opacity-0'}`}>
+                        <p className='text-p text-gray-50 text-nowrap font-semibold'>{session?.user?.name}</p>
+                        <p className='text-p text-gray-50 text-nowrap font-medium'>Administrador</p>
+                    </div> 
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm bg-neutral-700 text-gray-50 dropdown-content rounded-box mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm bg-neutral-700 text-gray-50 dropdown-content rounded-md drop-shadow-xl mt-3 w-52 p-2 shadow">
                         <li>
                             <button className="bg-inherit hover:bg-gray-100 hover:text-neutral-800" onClick={() => signOut()}>
                                 {content.profileDropdown[0].name}
