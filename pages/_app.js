@@ -9,8 +9,7 @@ export default function App({ Component, pageProps: { session, ...pageProps }, }
 
   return (
     <SessionProvider session={session}>
-      <Navbar />
-      <Sidebar />
+      {!session ? <Sidebar /> : <Navbar />}
       <Component {...pageProps} /> 
       <Footer />
     </SessionProvider>

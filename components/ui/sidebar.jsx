@@ -45,8 +45,8 @@ export function Sidebar(){
                 }}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="flex fixed flex-col drop-shadow-2xl py-5 gap-10 z-50 h-screen items-center p-3 bg-neutral-800/70 backdrop-blur-md">
-                <Link href='/dashboard'>
+                className="flex fixed flex-col drop-shadow-2xl py-5 gap-10 z-50 h-screen items-center p-3 bg-neutral-800/50 backdrop-blur-md">
+                <Link href='/'>
                     <Image 
                         src='/images/logos/AxisOne_icon1.png'
                         alt="AxisOne Logo"
@@ -114,7 +114,7 @@ export function Sidebar(){
                                 height={200}
                                 alt="User profile image"
                                 className="object-contain w-[200px]"
-                                src={session?.user?.image || "/images/default-avatar.png"} />
+                                src={session?.user?.image || "/images/defaultAvatar.png"} />
                         </div>
                     </div> 
                     <div className={`flex flex-col justify-around w-full transition-opacity duration-100 ease-in-out ${hover ? 'opacity-100' : 'opacity-0'}`}>
