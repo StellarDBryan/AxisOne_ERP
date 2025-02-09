@@ -4,7 +4,7 @@ export const data = {
         actives: [
             {
                 "id": 1,
-                "sku": 'ddscd4', 
+                "sku": 'ddscd4dd', 
                 "active": "Laptop HP", 
                 "provider": "Proveedor Tech",
                 "category": "Electrónica",
@@ -15,7 +15,7 @@ export const data = {
             }, 
             {
                 "id": 1,
-                "sku": 'ddscd4', 
+                "sku": 'ddscd4dd',
                 "active": "Laptop HP", 
                 "provider": "Proveedor Tech",
                 "category": "Electrónica",
@@ -26,7 +26,7 @@ export const data = {
             }, 
             {
                 "id": 1,
-                "sku": 'ddscd4', 
+                "sku": 'ddscd4dd',
                 "active": "Laptop HP", 
                 "provider": "Proveedor Tech",
                 "category": "Electrónica",
