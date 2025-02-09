@@ -20,7 +20,7 @@ export function ActiveCard({ active }){
 
     return(
         <>
-            <div className="card flex flex-row items-center justify-around w-[350px] h-[250px] bg-neutral-600 rounded-2xl drop-shadow-lg transition-all duration-200 ease-in-out">
+            <div className="card flex flex-row items-center justify-around py-20 w-[350px] h-[250px] bg-neutral-600 rounded-2xl drop-shadow-lg transition-all duration-200 ease-in-out">
                 {active.image 
                     ? <Image 
                         src={active.image}
