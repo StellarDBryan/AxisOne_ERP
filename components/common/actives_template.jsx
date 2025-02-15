@@ -11,9 +11,9 @@ export function Page(){
 
     return (
         <>
-            <section className="w-[90%] h-[2000px] ml-auto bg-transparent z-10 px-3 py-12 pt-32 gap-10 flex flex-col items-center"> 
+            <section className="w-[90%] md:w-[87%] lg:w-[90%] h-[2000px] mx-auto md:mx-0 md:ml-auto bg-transparent z-10 px-3 py-12 pt-32 gap-10 flex flex-col items-center"> 
                 <SearchActiveForm order={order} setOrder={setOrder} />
-                <div className={`w-full h-auto flex ${order ? 'flex-row' : 'flex-row-reverse'} flex-wrap gap-5 items-center justify-around`}> 
+                <div className={`w-full h-auto flex ${order ? 'flex-row' : 'flex-row-reverse'} flex-wrap gap-2 lg:gap-5 items-center justify-around`}> 
                     {actives.map((active, id) => (
                         <ActiveCard key={id} active={active} />
                     ))}

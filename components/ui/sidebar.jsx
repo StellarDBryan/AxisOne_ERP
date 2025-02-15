@@ -45,7 +45,7 @@ export function Sidebar(){
                 }}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="flex fixed flex-col drop-shadow-2xl py-5 gap-10 z-50 h-screen items-center p-3 bg-neutral-800/50 backdrop-blur-md">
+                className="hidden md:flex fixed flex-col drop-shadow-2xl py-5 gap-10 z-50 h-screen items-center p-3 bg-neutral-800/50 backdrop-blur-md">
                 <Link href='/'>
                     <Image 
                         src='/images/logos/AxisOne_icon1.png'
