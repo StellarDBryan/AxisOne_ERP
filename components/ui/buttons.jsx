@@ -58,3 +58,16 @@ export function SidebarBtn({ children, redirectURL }){
         </Link>
     );
 }
+
+export function MobileNavBtn ({ children, redirectURL }) {
+
+    const pathname = usePathname(); 
+
+    return (
+        <>
+            <Link href={redirectURL} className={`btn bg-transparent hover:bg-transparent hover:text-cyan-300 hover:border-neutral-800/0 border-x-0 border-b-0 rounded-none drop-shadow-none border-t-2 w-[20%] ${redirectURL == pathname ? 'text-cyan-300 border-cyan-300' : 'text-gray-50 border-neutral-800/0'}`}>
+                {children}
+            </Link>
+        </>
+    ); 
+}
